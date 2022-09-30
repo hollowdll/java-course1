@@ -3,7 +3,7 @@ package chapter9.exercise2;
 class Dominion {
 
 	private String nimi;
-	private int kirous, tila, pitaja, laani;
+	private int kirous, tila, pitaja, laani, pisteet;
 	
 	Dominion() {
 		nimi = "";
@@ -11,6 +11,7 @@ class Dominion {
 		tila = 0;
 		pitaja = 0;
 		laani = 0;
+		pisteet = 0;
 	}
 
 	Dominion(String nimi, int kirous, int tila, int pitaja, int laani) {
@@ -19,6 +20,7 @@ class Dominion {
 		this.tila = tila;
 		this.pitaja = pitaja;
 		this.laani = laani;
+		pisteet = 0;
 	}
 
 	String getNimi() {
@@ -61,10 +63,18 @@ class Dominion {
 		this.laani = laani;
 	}
 
+	int getPisteet() {
+		return pisteet;
+	}
+
+	void setPisteet(int pisteet) {
+		this.pisteet = pisteet;
+	}
+
 	@Override
 	public String toString() {
 		return "Dominion [nimi=" + nimi + ", kirous=" + kirous + ", tila=" + tila + ", pitaja=" + pitaja + ", laani="
-				+ laani + "]";
+				+ laani + ", pisteet=" + pisteet + "]";
 	}
 	
 }
