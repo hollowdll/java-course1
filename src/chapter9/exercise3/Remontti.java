@@ -6,26 +6,24 @@ class Remontti {
 
 	private int vuosi;
 	private String kuvaus;
-	private Henkilo tekija;
 	
 	Remontti() {
 		LocalDate today = LocalDate.now();
 		vuosi = today.getYear();
 		kuvaus = "";
-		tekija = null;
+	}
+	
+	Remontti(int vuosi, String kuvaus) {
+		this.vuosi = vuosi;
+		this.kuvaus = kuvaus;
 	}
 
 	int getVuosi() {
 		return vuosi;
 	}
 
-	boolean setVuosi(int vuosi) {
-		if (vuosi <= this.vuosi) {
-			this.vuosi = vuosi;
-			return true;
-		} else {
-			return false;
-		}
+	void setVuosi(int vuosi) {
+		this.vuosi = vuosi;
 	}
 
 	String getKuvaus() {
@@ -36,17 +34,9 @@ class Remontti {
 		this.kuvaus = kuvaus;
 	}
 	
-	Henkilo getTekija() {
-		return tekija;
-	}
-	
-	void setTekija(Henkilo tekija) {
-		this.tekija = tekija;
-	}
-	
 	@Override
 	public String toString() {
-		return "Remontti [vuosi=" + vuosi + ", kuvaus=" + kuvaus + ", tekija=" + tekija + "]";
+		return "Remontti [vuosi=" + vuosi + ", kuvaus=" + kuvaus + "]";
 	}
 	
 }

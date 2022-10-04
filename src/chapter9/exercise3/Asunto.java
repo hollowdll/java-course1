@@ -73,6 +73,12 @@ class Asunto {
 	void setRemontit(ArrayList<Remontti> remontit) {
 		this.remontit = remontit;
 	}
+	
+	void lisaaRemontti(Remontti remontti) {
+		if (remontit != null) {
+			remontit.add(remontti);
+		}
+	}
 
 	@Override
 	public String toString() {
