@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
+// This exercise uses the same Henkilo class found in ArrayListExtra1 //
+
 class ArrayListExtra2 {
 	
 	private ArrayList<Henkilo> henkilot = new ArrayList<Henkilo>();
